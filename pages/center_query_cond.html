@@ -1,0 +1,148 @@
+<!--
+	作者：jzx@yitong.com.cn
+	时间：2014-04-24
+	描述：产品查询 -- 查询条件
+-->
+
+<p class="text-danger margin_top15">INQUERY <span class="label label-warning">↘</span></p>
+<p style="color: #949699;font-size: 12px"><strong>产品查询</strong>
+	<hr />
+<div class="container-fluid margin_lf10">
+    <form class="form-horizontal" role="form" data-role="none">
+    	<fieldset>
+		<legend>基金公司</legend>
+			<div class="form-group">
+		      <label for="foundNameCtrl" class="col-sm-2 control-label">基金公司:</label>
+		      <div class="col-sm-6">
+		      	  <select  class="form-control" id="foundNameCtrl" data-role="none">
+			        <option>不限</option>
+			      </select>
+		      </div>
+		    </div>
+		</fieldset>
+		<fieldset>
+		<legend>当前净值</legend>
+			<div class="form-group">
+		      <label for="foundValCtrl" class="col-sm-2 control-label">当前净值:</label>
+		      <div class="col-sm-6">
+		      	  <select  class="form-control" id="foundValCtrl" data-role="none">
+			        <option value="">不限</option>
+			        <option value="">1元以下</option>
+			        <option value="">1~1.5元</option>
+			        <option value="">1.5~2.0元</option>
+			        <option value="">2.0~3.0元</option>
+			        <option value="">3.0~4.0元</option>
+			        <option value="">4.0~5.0元</option>
+			        <option value="">5.0元以上</option>
+			      </select>
+		      </div>
+		    </div>
+		</fieldset>
+		<fieldset>
+		<legend>投资类型</legend>
+			<div class="col-sm-12 col-sm-push-1">
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="ic1" value="1" data-role="none"> 所有
+				</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="ic2" value="2" data-role="none"> 股票型
+				</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="ic3" value="3" data-role="none"> 债券型
+				</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="ic4" value="4" data-role="none"> 混合型
+				</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="ic5" value="5" data-role="none"> 货币型
+				</label>
+				<label class="checkbox-inline">
+				  <input type="checkbox" id="ic6" value="6" data-role="none"> QDII型
+				</label>
+			</div>
+		</fieldset>
+		<fieldset>
+		<legend>投资回报率</legend>
+			<div class="row">
+			  <div class="col-sm-2 col-sm-push-2">
+			    <div class="form-group">
+			      <label for="nearMon">最近一月</label>
+			      <select id="nearMon" class="form-control" data-role="none">
+				        <option value="">不限</option>
+				        <option value="">0以下</option>
+				        <option value="">0~5%</option>
+				        <option value="">5%~10%</option>
+				        <option value="">10%~20%</option>
+				        <option value="">20%~50%</option>
+				        <option value="">50%~100%</option>
+				        <option value="">100%以上</option>
+			      </select>
+			    </div>
+			  </div>
+			  <div class="col-sm-2 col-sm-push-3">
+			    <div class="form-group">
+			      <label for="nearSeason">最近一季</label>
+			      <select id="nearSeason" class="form-control" data-role="none">
+			            <option value="">不限</option>
+				        <option value="">0以下</option>
+				        <option value="">0~5%</option>
+				        <option value="">5%~10%</option>
+				        <option value="">10%~20%</option>
+				        <option value="">20%~50%</option>
+				        <option value="">50%~100%</option>
+				        <option value="">100%以上</option>
+			      </select>
+			    </div>
+			  </div>
+			  <div class="col-sm-2 col-sm-push-4">
+			     <div class="form-group">
+			      <label for="nearHalfYear">最近半年</label>
+			      <select id="nearHalfYear" class="form-control" data-role="none">
+			        	<option value="">不限</option>
+				        <option value="">0以下</option>
+				        <option value="">0~5%</option>
+				        <option value="">5%~10%</option>
+				        <option value="">10%~20%</option>
+				        <option value="">20%~50%</option>
+				        <option value="">50%~100%</option>
+				        <option value="">100%以上</option>
+			      </select>
+			    </div>
+			  </div>
+			</div>
+		</fieldset>
+		<fieldset>
+		<legend>分红费率</legend>
+			<div class="form-group">
+		      <label for="foundAccbonusCtrl" class="col-sm-3 col-sm-pull-0 control-label">基金累计分红:</label>
+		      <div class="col-sm-6">
+		      	  <select  class="form-control" id="foundAccbonusCtrl" data-role="none">
+			        <option value="">不限</option>
+			        <option value="">0.2元以下</option>
+			        <option value="">0.2~0.5元</option>
+			        <option value="">0.5~0.8元</option>
+			        <option value="">0.8~1元</option>
+			        <option value="">1元以上</option>
+			      </select>
+		      </div>
+		    </div>
+		    <div class="form-group">
+		      <label for="foundRate" class="col-sm-3 col-sm-pull-0 control-label">基金管理费率:</label>
+		      <div class="col-sm-6">
+		      	  <select  class="form-control" id="foundRate" data-role="none">
+			        <option value="">不限</option>
+			        <option value="">0.5%以下</option>
+			        <option value="">1%以下</option>
+			        <option value="">1.5%以下</option>
+			        <option value="">2%以下</option>
+			        <option value="">3%以下</option>
+			      </select>
+		      </div>
+		    </div>
+		</fieldset>
+		<div class="col-sm-3 col-sm-push-3">
+		   <button id="foundQueryBtn" type="button" class="btn btn-primary btn-lg btn-block" data-role="none">查询</button>
+		</div>
+    </form>
+	
+</div>

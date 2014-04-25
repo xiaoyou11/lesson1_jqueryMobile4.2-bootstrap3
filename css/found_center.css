@@ -1,0 +1,39 @@
+/*主题样式*/
+body{background-color: #F2F1EC}
+.ui-content {border-width: 0; overflow: visible; overflow-x: hidden; padding: 0em;}
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {color: #333;text-shadow: 0 0px 0 #f3f3f3;}
+.ui-mobile label, .ui-controlgroup-label {display: inline-block;margin: 0 0 .4em;} /*使radio/checkbox能够并排显示*/
+.ui-mobile label, div.ui-controlgroup-label {font-weight: 500; font-size: 14px;color: #677CA2} /*改变Label标签的字体厚度*/
+legend{margin-bottom: 5px;font-size: 15px;font-weight: bold}
+.rightmenu>.nav-pills>li.active>a, .rightmenu>.nav-pills>li.active>a:hover, .rightmenu>.nav-pills>li.active>a:focus  {color: #3B576F;background-color: #87C8FF;}
+.rightmenu>.nav>li>a{text-decoration: none;background-color: #42A8FF;color: #FFFFFF}
+/*附加样式*/
+.margin_bt0{margin-bottom: 0;}
+.fullHeight{height: 100%;}
+.border_rt{border-right: solid 1px #666666;}
+.margin_top15{margin-bottom: 3px;margin-top: 15px;}
+.margin_lf10{margin-left: 10px;}
+.margin_lf15{margin-left: 15px;}
+/*查询列表上部返回按钮*/
+.rightBackCond {position: absolute;top: 16px;right: 90px;font-size: larger;} 
+/*上导航*/
+.back_home{width: 30px;height: 30px; margin-top: 10px; position: absolute;}
+/*左导航*/
+.bg-img-ico1{background: url("../images/ico1.png") no-repeat 10% 50%;}
+.bg-img-ico2{background: url("../images/ico2.png") no-repeat 10% 50%;}
+.bg-img-ico3{background: url("../images/ico3.png") no-repeat 10% 50%;}
+.bg-img-ico1  a:hover,.leftcategory li:nth-child(1).active{color:#ee741f; background: #fff url("../images/ico1y.png") no-repeat 10% 50%; text-decoration:none;border-right:3px solid red;}
+.bg-img-ico2  a:hover,.leftcategory li:nth-child(2).active{color:#ee741f; background: #fff url("../images/ico2y.png") no-repeat 10% 50%; text-decoration:none;border-right:3px solid red;}
+.bg-img-ico3  a:hover,.leftcategory li:nth-child(3).active{color:#ee741f; background: #fff url("../images/ico3y.png") no-repeat 10% 50%; text-decoration:none;border-right:3px solid red;}
+.pic{padding:40px 0px;height:110px;text-align:center;font-size:20px;color:#fff;line-height:30px;background:url(../images/bluebg.png) repeat;}
+.leftcategory { padding:0;}
+.leftcategory li{ margin:0; padding:0;list-style:none; height:75px; border-bottom: dotted 1px #666666;}
+.leftcategory li a{ display:block; height:75px; font:400 bold 16px 黑体; text-align:center; color:#666; line-height:75px;border-bottom: dotted 1px #666666;}
+/*滚动表格*/
+.scroll-table table{margin-bottom: 0px;}
+.scroll-table table td a {display: block;padding: 10px 0px 10px 0px;color: #fff;line-height: 20px;text-align: center;background: #0076c6 url("../images/arrow4.png") no-repeat 70% 50%;border-radius: 10px;}
+.scroll-table table td a:hover {background: #ee741f url("../images/arrow4.png") no-repeat 80% 50%;color: #fff;text-decoration: none;}
+.scroll-table table td.errorText{text-align: center;font: 400 bold 16px 黑体;color:#666}
+div.fixedwrapper{height: 600px; padding-top: 35px; overflow:auto; } /*表格滚动条设置*/
+/*设置左侧菜单成暗灰色边框*/
+.rightmenu{/*background-color: #B3B0B0;*/}

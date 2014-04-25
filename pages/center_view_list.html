@@ -1,0 +1,50 @@
+<!--
+	作者：jzx@yitong.com.cn
+	时间：2014-04-24
+	描述：产品中心 -- 产品列表
+-->
+
+<p class="text-danger margin_top15">INQUERY <span class="label label-warning">↘</span></p>
+<p style="color: #949699;font-size: 12px"><strong>产品净值</strong> -- <small>推荐的基金</small>
+	<hr />
+<div class="container-fluid">
+   <div class="col-sm-11 scroll-table"> <!--滚动表格-->
+   		 <table class="table"> <!--固定表头-->
+				<tr style="background-color: #F0D49B;">
+					  <th  style="text-align:center;vertical-align:middle;">名称/代码</th>
+					  <th  style="text-align:center;vertical-align:middle;">单位净值(元)</th>
+					  <th  style="text-align:center;vertical-align:middle;">基金状态</th>
+					  <th  style="text-align:center;vertical-align:middle;">涨跌幅</th>
+				</tr>
+		 </table>
+ 		 <div id="vlistWrapper" class="fixedwrapper">
+			<div id="scroller">
+				<div id="pullDown" class="idle pullDown">
+					<span class="pullDownIcon"></span>
+					<span class="pullDownLabel">下拉立即刷新...</span>
+				</div>
+				<table class="table table-hover table-condensed" id="mainList">
+					<tbody id="tableContentDiv" class="scrollContent">
+						<tr>
+							<td colspan="3" class="errorText"></td>
+						</tr>
+					</tbody>
+				</table>
+				<div id="pullUp" class="idle pullUp">
+					<span class="pullUpIcon"></span>
+					<span class="pullUpLabel">上拉加载更多...</span>
+				</div>
+			</div>
+		 </div>
+   </div>
+   <div class="col-sm-1 rightmenu"> <!--右侧菜单-->
+   		<ul class="nav nav-pills nav-stacked">
+		  <li class="active" stat="hotsale"><a href="#">热<br>销<br>基<br>金</a></li>
+		  <li><a href="#" stat="stock">股<br>票<br>型</a></li>
+		  <li><a href="#" stat="bond">债<br>券<br>型</a></li>
+		  <li><a href="#" stat="mixed">混<br>合<br>型</a></li>
+		  <li><a href="#" stat="currency">货<br>币<br>型</a></li>
+		  <li><a href="#" stat="qdii">QD<br>II<br>型</a></li>
+		</ul>
+   </div>
+</div>

@@ -1,0 +1,139 @@
+/**
+ *
+ * Pull down styles
+ *
+ */
+
+.fixedwrapper .pullDown,.fixedwrapper .pullUp {
+    background:#fff;
+    height:40px;
+    line-height:40px;
+    padding:5px 10px;
+    border-bottom:1px solid #ccc;
+    font-weight:bold;
+    font-size:14px;
+    color:#888;
+}
+
+.fixedwrapper .pullDownIcon, .fixedwrapper .pullUpIcon  {
+	margin-left: 40%; /* 居中 */
+    display:block; float:left;
+    width:40px; height:40px;
+    background:url(../images/pull-icon@2x.png) 0 0 no-repeat;
+    background-size:40px 80px;
+    /*chrome*/
+    -webkit-background-size:40px 80px;
+    -webkit-transition-property:-webkit-transform;
+    -webkit-transition-duration:250ms;
+    /*ff*/
+    -moz-background-size:40px 80px;
+    -moz-transition-property:-moz-transform;
+    -moz-transition-duration:250ms;
+    /*opera*/
+    -o-background-size:40px 80px;
+    -o-transition-property:-o-transform;
+    -o-transition-duration:250ms;
+}
+.fixedwrapper .idle .pullDownIcon {
+    background-position:0 0;
+    /*chrome*/
+    -webkit-transform:rotate(0deg) translateZ(0);
+    -webkit-animation-name:idle;
+    -webkit-animation-duration:0;
+    /*ff*/
+    -moz-transform:rotate(0deg) translateZ(0);
+    -moz-animation-name:idle;
+    -moz-animation-duration:0;
+    /*opera*/
+    -o-transform:rotate(0deg) translateZ(0);
+    -o-animation-name:idle;
+    -o-animation-duration:0;
+}
+.fixedwrapper .idle .pullUpIcon  {
+    background-position:0 0;
+    /*chrome*/
+    -webkit-transform:rotate(-180deg) translateZ(0);
+    /*ff*/
+    -moz-transform:rotate(-180deg) translateZ(0);
+    /*opera*/
+    -o-transform:rotate(-180deg) translateZ(0);
+}
+
+.fixedwrapper .flip .pullDownIcon {
+    background-position:0 0;
+    /*chrome*/
+    -webkit-transform:rotate(-180deg) translateZ(0);
+    -webkit-animation-name:idle;
+    -webkit-animation-duration:0;
+    /*ff*/
+    -moz-transform:rotate(-180deg) translateZ(0);
+    -moz-animation-name:idle;
+    -moz-animation-duration:0;
+    /*opera*/
+    -o-transform:rotate(-180deg) translateZ(0);
+    -o-animation-name:idle;
+    -o-animation-duration:0;
+}
+
+.fixedwrapper .flip .pullUpIcon {
+    background-position:0 0;
+    /*chrome*/
+    -webkit-transform:rotate(0deg) translateZ(0);
+    /*ff*/
+    -moz-transform:rotate(0deg) translateZ(0);
+    /*opera*/
+    -o-transform:rotate(0deg) translateZ(0);
+}
+
+.fixedwrapper .loading .pullDownIcon, .fixedwrapper .loading .pullUpIcon {
+    background-position:0 100%;
+    /*chrome*/
+    -webkit-transform:rotate(0deg) translateZ(0);
+    -webkit-transition-duration:0ms;
+    -webkit-animation-name:loading;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    /*ff*/
+    -moz-transform:rotate(0deg) translateZ(0);
+    -moz-transition-duration:0ms;
+    -moz-animation-name:loading;
+    -moz-animation-duration:2s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:linear;
+    /*opera*/
+    -o-transform:rotate(0deg) translateZ(0);
+    -o-transition-duration:0ms;
+    -o-animation-name:loading;
+    -o-animation-duration:2s;
+    -o-animation-iteration-count:infinite;
+    -o-animation-timing-function:linear;
+}
+
+/*chrome*/
+@-webkit-keyframes loading {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+@-webkit-keyframes idle {
+    from { -webkit-transform:rotate(0deg) translateZ(0); }
+    to { -webkit-transform:rotate(0deg) translateZ(0); }
+}
+/*ff*/
+@-moz-keyframes loading {
+    from { -moz-transform:rotate(0deg) translateZ(0); }
+    to { -moz-transform:rotate(360deg) translateZ(0); }
+}
+@-moz-keyframes idle {
+    from { -moz-transform:rotate(0deg) translateZ(0); }
+    to { -moz-transform:rotate(0deg) translateZ(0); }
+}
+/*opera*/
+@-o-keyframes loading {
+    from { -o-transform:rotate(0deg) translateZ(0); }
+    to { -o-transform:rotate(360deg) translateZ(0); }
+}
+@-o-keyframes idle {
+    from { -o-transform:rotate(0deg) translateZ(0); }
+    to { -o-transform:rotate(0deg) translateZ(0); }
+}

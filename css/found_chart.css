@@ -1,0 +1,31 @@
+/*附加样式*/
+.margin_lf10{margin-left: 10px;}
+.margin_rt6{margin-right: 20px;}
+.margin_bt5{margin-bottom: 5px;}
+/*上导航*/
+.back_home{width: 30px;height: 30px; margin-top: 10px; position: absolute;}
+/*功能按钮*/
+.function_menu{position: absolute;top: 15px;right:25%;}
+.function_menu>a{color:#FFFFFF}
+
+/*左右布局*/
+div.leftside{border: 2px solid #D1D1CF; border-bottom-width:0;position: fixed;bottom: 3px;top: 124px;right: 30%;left: 2%;padding-left: 10px;padding-top: 10px;}
+div.rightside{position: fixed;bottom: 0px;top: 124px;right: 2%;left: 72%;padding-top: 10px;}
+
+/*上半部分样式*/
+div.inner_top > ._left{float:left;width: 80%;}
+div.inner_top > ._right{float:left;width: 20%;text-align:center;}
+div.inner_top > ._right > .risk_level{height:110px;background: url(../images/risk_level.jpg) no-repeat 50% 50%;background-size:contain;margin-bottom: 6px;}
+div.inner_top > .pic {float:right;width: 80px;height: 80px;overflow: hidden;}
+div.inner_top > .pic > p {font-weight: bold;}
+
+/*下半部分样式*/
+div.inner_bottom{clear:both;position:fixed;bottom:80px;top:300px;left: 2%;right: 30%;border: 1px solid #AC2925;}
+div.timeline{margin:15px 0 0;margin-left: 25%;}
+
+/*表格列基本样式*/
+.align_rt{text-align: right}
+.font_red{font-weight: bold;color: #C12E2A;}
+
+/**/
+div.timeline>ul>li>a {position: relative;display: block;padding: 5px 15px;}

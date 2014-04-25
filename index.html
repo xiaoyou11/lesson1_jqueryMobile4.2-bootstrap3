@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>hello world</title>
+    <script type="text/javascript">
+   		document.addEventListener('plusready', function(){
+   			alert("基金测试页面!");
+   		});
+   		function openSearch (url) {
+   			plus.ui.createWindow(url).show();
+   		}
+    </script>
+</head>
+<body>
+	
+	<button onclick="openSearch('found_search.html')">查询</button>
+	<button onclick="openSearch('found_listing.html')">列表</button>
+	<button onclick="openSearch('found_detail.html')">详情</button>
+	
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!--
+	作者：jzx@yitong.com.cn
+	时间：2014-04-21
+	描述：产品中心 -- 基金列表
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>基金</title>
+		<!--系统类库-->
+		<link rel="stylesheet" href="framework/jqm141/jquery.mobile-1.4.1.min.css"/>
+		<link rel="stylesheet" href="framework/bootstrap31/css/bootstrap.min.css"/>
+		<link rel="stylesheet" href="framework/iscroll.css"/>
+		<script src="framework/jquery.min.js"></script>
+		<script src="framework/jqm141/jquery.mobile-1.4.1.min.js"></script>
+		<script src="framework/jsrender.min.js"></script>
+		<script src="framework/ichart.latest.min.js"></script>
+		<script src="framework/iscroll.js"></script>
+		<script src="framework/ichart.latest.min.js"></script>
+		<script src="framework/conf.js" ></script>
+		<!-- 应用类库-->
+		<link rel="stylesheet" href="css/found_center.css"/>
+		<link rel="stylesheet" href="css/found_chart.css"/>
+		<script src="js/center_view_list.js"></script>  <!--查询列表与产品列表共用一套规则-->
+		<script src="js/center_query_cond.js"></script> <!--查询条件规则-->
+		<script src="js/found_center.js"></script>	<!--产品中心-->
+		<script src="js/found_chart.js"></script>	<!--产品图表-->
+	</head>
+	<body>
+		<div data-role="page" id="found-center-page" class="fullHeight">
+			<div role="main" class="ui-content fullHeight">
+				<nav class="navbar navbar-inverse margin_bt0">
+					<div class="container-fluid">
+						<ul class="nav navbar-nav">
+							 <li><img alt="返回" class="back_home" src="images/icon_back.png"/></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-film"></span></a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-registration-mark"></span></a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="row fullHeight">
+					<div class="col-sm-2 fullHeight">
+					  	<dl id="zd" class="fullHeight border_rt">  
+						    <dt class="pic"><img src="images/ico.png">&nbsp;基金</dt>  
+						    <dd>  
+						        <ul class="leftcategory" id="leftcategory">  
+						            <li class="bg-img-ico1"><a href="#">业务介绍</a></li>  
+						            <li class="bg-img-ico2 active"><a href="#">产品中心</a></li>  
+						            <li class="bg-img-ico3 "><a href="#">产品查询</a></li>  
+						        </ul>  
+						    </dd> 
+						</dl>  
+					</div>
+					<div class="col-sm-10" id="LoadDiv"> <!--装载Div--></div>
+				</div> <!-- row -->
+			</div> <!-- role-main -->
+				<script id="foundListTmpl" type="text/x-jsrender">
+					<tr id={{:CODE}}>
+						<td  style="text-align:center;vertical-align:middle;">{{:NAME}}<br>{{:CODE}}</td>
+						<td  style="text-align:center;vertical-align:middle;">{{:NETVALUE}}<br>{{:DATE}}</td>
+						<td  style="text-align:center;vertical-align:middle;">{{:STATUS}}</td>
+						<td  style="text-align:center;vertical-align:middle;padding:10px 30px 10px 30px;"><a href="#">{{:INCREASE_DAY}}%</a></td>
+					</tr>
+				</script>
+		</div>	<!-- role-page -->
+<!--
+	作者：jzx@yitong.com.cn
+	时间：2014-04-21
+	描述：产品中心 -- 基金详情
+-->
+		<div data-role="page" id="found-chart-page">
+			<div role="main" class="ui-content">
+				<nav class="navbar navbar-inverse">
+					<div class="container-fluid">
+						<ul class="nav navbar-nav">
+							 <li><img alt="返回" class="back_home" src="images/icon_back.png"/></li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-film"></span></a></li>
+							<li><a href="#"><span class="glyphicon glyphicon-registration-mark"></span></a></li>
+						</ul>
+					</div>
+				</nav>
+				<div class="row margin_lf10">
+					<div class="col-sm-8">
+						<p class="text-danger margin_bt5">PRODUCTS <span class="label label-warning">↘</span></p>
+						<p class="margin_bt5"><strong>产品净值  </strong>  -- <small>热销的基金</small></p>
+						<div class="leftside">
+							<div class="inner_top">
+								<div class="_left">
+									<table class="table table-condensed">
+										<tr>
+											<th>合润股票B(150017)</th>
+											<th>状态</th>
+											<th class="align_rt">累计分红</th>
+										</tr>
+										<tr>
+											<td>2013-04-18</td>
+											<td class="font_red">开放期</td>
+											<td class="align_rt font_red">--</td>
+										</tr>
+									</table>
+									<table class="table table-condensed">
+										<tr>
+											<th>基金管理人</th>
+											<th>基金类型</th>
+											<th>净值</th>
+											<th class="align_rt">累计净值</th>
+										</tr>
+										<tr>
+											<td>兴业全球基金管理有限公司</td>
+											<td>货币基金</td>
+											<td class="font_red">0.02360000</td>
+											<td class="align_rt font_red">2.26500000</td>
+										</tr>
+									</table>
+								</div>
+								<div class="_right">
+									<div class="risk_level">
+										<!--
+											<h1>风险等级</h1>
+											<p>A5</p>
+										-->
+									</div>
+									<p>风险等级:高</p>
+								</div>
+							</div>		
+							<div class="inner_bottom">
+								<div class=""></div>
+								<div id="chartDiv"></div>
+								<div class="timeline">
+									<ul class="nav nav-pills"  data-role="none" id="timelineDiv">
+									  <li class="active"><a href="#">一个月</a></li>
+									  <li><a href="#">三个月</a></li>
+									  <li><a href="#">半年</a></li>
+									  <li><a href="#">一年</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="function_menu">
+							<a data-role="none" class="btn btn-success btn-sm margin_rt6" role="button">基金档案</a>
+							<a data-role="none" class="btn btn-info btn-sm" role="button">意向登记</a>
+						</div>
+						<div class="rightside">
+							<h4><strong>业绩表现</strong></h4>
+							<div class="table-responsive">
+								<table class="table table-condensed">
+									<tr>
+										<td>时间</td>
+										<td>回报率</td>
+										<td>排名</td>
+									</tr>
+									<tr><td>最近一月</td><td class="font_red">-7.050%</td><td>98</td></tr>
+									<tr><td>最近三月</td><td class="font_red">-7.050%</td><td>98</td></tr>
+									<tr><td>最近六月</td><td class="font_red">-7.050%</td><td>98</td></tr>
+									<tr><td>最近一月</td><td class="font_red">-7.050%</td><td>98</td></tr>
+									<tr><td>最近二月</td><td class="font_red">-7.050%</td><td>98</td></tr>
+									<tr><td>最近三月</td><td class="font_red">-7.050%</td><td>98</td></tr>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div> <!-- row -->
+			</div> <!-- role-main -->
+		</div> <!-- role-page -->
+	
+	</body>
+</html>
